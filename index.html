@@ -1,68 +1,38 @@
+
 <!DOCTYPE html>
 <html lang="az">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUXAR ASSET | Terminal</title>
-    
     <link rel="icon" type="image/jpeg" href="https://i.postimg.cc/rw62MM5V/IMG-20260207-WA0209.jpg">
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root { --bg: #050505; --card: #0d0d0d; --poly: #8247e5; --text: #f0f0f0; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; display: flex; justify-content: center; min-height: 100vh; padding: 30px 20px; }
-        
-        .container { width: 100%; max-width: 420px; text-align: center; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; display: flex; justify-content: center; min-height: 100vh; padding: 20px; }
+        .container { width: 100%; max-width: 420px; }
 
-        /* Başlıq: BTC üslubunda loqo solda, ad yanında */
+        /* Professional Header */
         .header-nav {
-            display: flex; align-items: center; justify-content: flex-start;
-            margin-bottom: 25px; padding-left: 5px;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 35px; padding-bottom: 15px; border-bottom: 1px solid #1a1a1a;
         }
-        .nav-logo { width: 30px; height: 30px; border-radius: 50%; margin-right: 12px; object-fit: cover; border: 1px solid #222; }
-        .nav-brand { font-weight: 700; font-size: 1.3rem; letter-spacing: 1px; color: #fff; }
+        .nav-logo { width: 50px; height: 50px; border-radius: 50%; margin-right: 15px; border: 2px solid var(--poly); object-fit: cover; }
+        .nav-brand { font-weight: 700; font-size: 1.5rem; letter-spacing: 2px; color: #fff; }
 
-        /* Mərkəzi Mətn: Daha maraqlı və seliqəli */
-        .hero-box { text-align: left; margin-bottom: 40px; padding: 0 5px; }
-        .hero-box h2 { font-size: 1.8rem; font-weight: 700; line-height: 1.2; color: #fff; margin-bottom: 12px; }
+        /* Digər hissələr stabil qalır amma loqo daha aydın olacaq */
+        .hero-box { text-align: left; margin-bottom: 40px; }
+        .hero-box h2 { font-size: 1.9rem; font-weight: 700; color: #fff; }
         .hero-box h2 span { color: var(--poly); }
-        .hero-box p { font-size: 0.9rem; color: #666; line-height: 1.5; font-weight: 300; }
-
-        /* Kletkalar: Orijinal "Zirehli" Stil */
-        .grid-system { display: flex; flex-direction: column; gap: 12px; margin-bottom: 25px; }
-        .kletka { background: var(--card); border: 1px solid #1a1a1a; padding: 18px 15px; border-radius: 15px; text-align: left; position: relative; }
-        .label { font-size: 0.55rem; color: #555; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 5px; }
-        .value { font-size: 0.95rem; color: #ccc; }
-        .highlight { color: var(--poly); font-weight: 700; }
-        
-        /* Subut Butonları: Görünən və Rəngli */
-        .proof-btn { 
-            position: absolute; right: 15px; top: 18px; 
-            font-size: 0.6rem; color: var(--poly); border: 1px solid #222; 
-            padding: 5px 10px; border-radius: 8px; text-decoration: none; 
-            text-transform: uppercase; font-weight: 700; transition: 0.3s;
-        }
-        .proof-btn:hover { background: var(--poly); color: #fff; }
-
-        /* Contract Box */
-        .ca-container { margin-bottom: 30px; }
-        .ca-box { background: #000; border: 1px solid #222; padding: 15px; border-radius: 12px; cursor: pointer; text-align: left; }
-        code { font-size: 0.65rem; color: #555; word-break: break-all; }
-        
-        /* Şüşə effektli Polygonscan linki */
-        .scan-link { display: inline-block; margin-top: 12px; font-size: 0.7rem; color: #444; text-decoration: none; transition: 0.3s; }
-        .scan-link:hover { color: var(--poly); }
-
-        /* Düymələr: Orijinal Bənövşəyi */
-        .btn { width: 100%; padding: 18px; border-radius: 15px; text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 12px; transition: 0.3s; }
-        .btn-buy { background: var(--poly); color: #fff; box-shadow: 0 5px 15px rgba(130, 71, 229, 0.3); }
-        .btn-wp { background: transparent; color: #fff; border: 1px solid #222; }
-
-        .social-icons { display: flex; justify-content: center; gap: 45px; margin-top: 35px; padding-top: 25px; border-top: 1px solid #111; }
-        .social-icons a { color: #fff; font-size: 1.6rem; transition: 0.3s; }
-        .social-icons a:hover { color: var(--poly); }
+        .grid-system { display: flex; flex-direction: column; gap: 12px; }
+        .kletka { background: var(--card); border: 1px solid #1a1a1a; padding: 18px; border-radius: 15px; position: relative; }
+        .label { font-size: 0.6rem; color: #555; text-transform: uppercase; }
+        .value { font-size: 1rem; color: #ccc; }
+        .ca-box { background: #000; border: 1px solid #222; padding: 15px; border-radius: 12px; margin-top: 20px; }
+        .btn { width: 100%; padding: 18px; border-radius: 15px; text-decoration: none; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 15px; }
+        .btn-buy { background: var(--poly); color: #fff; }
     </style>
 </head>
 <body>
@@ -74,50 +44,19 @@
 
         <section class="hero-box">
             <h2>Riyazi Qıtlıq. <br><span>Tam Şəffaflıq.</span></h2>
-            <p>Heç bir mərkəzi idarəyə tabe olmayan, koda əsaslanan yeni nəsil dəyər rezervi.</p>
+            <p style="color:#666; font-size:0.9rem; margin-top:10px;">Koda əsaslanan yeni nəsil mərkəzi olmayan aktiv.</p>
         </section>
 
         <div class="grid-system">
-            <div class="kletka"><span class="label">Total Max Supply</span><span class="value">50,000 LUXAR</span></div>
-            <div class="kletka">
-                <span class="label">QuickSwap (Circulating)</span>
-                <span class="value highlight">30,000 LUXAR</span>
-                <a href="#" class="proof-btn">BURN <i class="fa-solid fa-fire"></i></a>
-            </div>
-            <div class="kletka">
-                <span class="label">Underground Reserve (100 Years)</span>
-                <span class="value">10,000 LUXAR</span>
-                <a href="#" class="proof-btn">PROOF <i class="fa-solid fa-lock"></i></a>
-            </div>
-            <div class="kletka">
-                <span class="label">Dev Fund (5 Year Lock)</span>
-                <div style="display: flex; justify-content: space-between; align-items: center;"><span class="value">10,000 LUXAR</span><span style="font-size: 0.65rem; color: var(--poly); font-weight: 700;">+ 100/Month</span></div>
-                <a href="#" class="proof-btn">PROOF <i class="fa-solid fa-shield-halved"></i></a>
-            </div>
+            <div class="kletka"><span class="label">Supply</span><br><span class="value">50,000 LUXAR</span></div>
+            <div class="kletka"><span class="label">Network</span><br><span class="value" style="color:#8247e5">Polygon (MATIC)</span></div>
         </div>
 
-        <div class="ca-container">
-            <div class="ca-box" onclick="copyCA()">
-                <span style="font-size: 0.55rem; color: #444; display: block; margin-bottom: 5px; text-transform: uppercase;">Smart Contract Address</span>
-                <code id="ca">0x0000000000000000000000000000000000000000</code>
-            </div>
-            <a href="#" class="scan-link">Verify on Polygonscan <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <div class="ca-box">
+            <code style="font-size:0.7rem; color:#444;">Contract: 0x...tezliklə</code>
         </div>
 
-        <a href="#" class="btn btn-buy"><i class="fa-solid fa-cart-shopping"></i> Buy on QuickSwap</a>
-        <a href="#" class="btn btn-wp">Technical Paper</a>
-
-        <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-telegram"></i></a>
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
+        <a href="#" class="btn btn-buy">Buy on QuickSwap</a>
     </div>
-
-    <script>
-        function copyCA() {
-            navigator.clipboard.writeText(document.getElementById("ca").innerText);
-            alert("Contract address copied!");
-        }
-    </script>
 </body>
 </html>
