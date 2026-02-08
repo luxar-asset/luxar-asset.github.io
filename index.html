@@ -7,7 +7,7 @@
     
     <link rel="icon" type="image/png" href="https://i.postimg.cc/J4mqxHWT/Adobe-Express-file.png">
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root { --bg: #050505; --card: #0d0d0d; --poly: #8247e5; --text: #f0f0f0; }
@@ -16,42 +16,39 @@
         
         .container { width: 100%; max-width: 420px; text-align: center; }
 
-        /* Başlıq: Yenidən SOLDA və daha İRİ */
+        /* HEADER: TAM İSTƏDİYİN NƏHƏNG VƏ SOLDAKI GÖRÜNTÜ */
         .header-nav {
             display: flex; 
             align-items: center; 
-            justify-content: flex-start; /* Sola söykəndi */
-            margin-bottom: 30px;
-            padding-left: 5px;
+            justify-content: flex-start; 
+            margin-bottom: 40px;
+            padding-left: 0;
         }
         .nav-logo { 
-            width: 55px; /* Loqo böyüdü */
-            height: 55px; 
-            margin-right: 15px; 
+            width: 120px; /* NƏHƏNG ÖLÇÜ - "Spiçka qutusu" deyil artıq */
+            height: 120px; 
+            margin-right: 5px; /* Məsafəni minimuma endirdim */
             object-fit: contain;
-            /* PC və Mobil üçün maksimum kəskinlik */
             image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
             display: block;
         }
         .nav-brand { 
-            font-weight: 700; 
-            font-size: 1.5rem; 
-            letter-spacing: 1px; 
+            font-weight: 900; /* Ən qalın şrift */
+            font-size: 2.5rem; /* Çox iri hərf ölçüsü */
+            letter-spacing: -1px; 
             color: #fff; 
             text-transform: uppercase;
+            line-height: 1;
         }
 
-        /* Mərkəzi Mətn */
-        .hero-box { text-align: left; margin-bottom: 40px; padding: 0 5px; }
+        .hero-box { text-align: left; margin-bottom: 40px; }
         .hero-box h2 { font-size: 1.8rem; font-weight: 700; line-height: 1.2; color: #fff; margin-bottom: 12px; }
         .hero-box h2 span { color: var(--poly); }
-        .hero-box p { font-size: 0.95rem; color: #666; line-height: 1.5; font-weight: 300; }
+        .hero-box p { font-size: 0.95rem; color: #666; line-height: 1.5; }
 
-        /* Kletkalar */
         .grid-system { display: flex; flex-direction: column; gap: 12px; margin-bottom: 25px; }
         .kletka { background: var(--card); border: 1px solid #1a1a1a; padding: 18px 15px; border-radius: 15px; text-align: left; position: relative; }
-        .label { font-size: 0.55rem; color: #555; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 5px; }
+        .label { font-size: 0.55rem; color: #555; text-transform: uppercase; display: block; margin-bottom: 5px; }
         .value { font-size: 0.95rem; color: #ccc; }
         .highlight { color: var(--poly); font-weight: 700; }
         
@@ -59,26 +56,19 @@
             position: absolute; right: 15px; top: 18px; 
             font-size: 0.6rem; color: var(--poly); border: 1px solid #222; 
             padding: 5px 10px; border-radius: 8px; text-decoration: none; 
-            text-transform: uppercase; font-weight: 700; transition: 0.3s;
+            font-weight: 700;
         }
-        .proof-btn:hover { background: var(--poly); color: #fff; }
 
-        /* Contract Box */
         .ca-container { margin-bottom: 30px; }
         .ca-box { background: #000; border: 1px solid #222; padding: 15px; border-radius: 12px; cursor: pointer; text-align: left; }
         code { font-size: 0.65rem; color: #555; word-break: break-all; }
         
-        .scan-link { display: inline-block; margin-top: 12px; font-size: 0.7rem; color: #444; text-decoration: none; transition: 0.3s; }
-        .scan-link:hover { color: var(--poly); }
-
-        /* Düymələr */
-        .btn { width: 100%; padding: 18px; border-radius: 15px; text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 12px; transition: 0.3s; }
-        .btn-buy { background: var(--poly); color: #fff; box-shadow: 0 5px 15px rgba(130, 71, 229, 0.3); }
+        .btn { width: 100%; padding: 18px; border-radius: 15px; text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 12px; }
+        .btn-buy { background: var(--poly); color: #fff; }
         .btn-wp { background: transparent; color: #fff; border: 1px solid #222; }
 
         .social-icons { display: flex; justify-content: center; gap: 45px; margin-top: 35px; padding-top: 25px; border-top: 1px solid #111; }
-        .social-icons a { color: #fff; font-size: 1.8rem; transition: 0.3s; }
-        .social-icons a:hover { color: var(--poly); }
+        .social-icons a { color: #fff; font-size: 1.8rem; }
     </style>
 </head>
 <body>
@@ -117,7 +107,6 @@
                 <span style="font-size: 0.55rem; color: #444; display: block; margin-bottom: 5px; text-transform: uppercase;">Smart Contract Address</span>
                 <code id="ca">0x0000000000000000000000000000000000000000</code>
             </div>
-            <a href="#" class="scan-link">Verify on Polygonscan <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
 
         <a href="#" class="btn btn-buy"><i class="fa-solid fa-cart-shopping"></i> Buy on QuickSwap</a>
