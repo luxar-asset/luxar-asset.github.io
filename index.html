@@ -16,27 +16,34 @@
         
         .container { width: 100%; max-width: 420px; }
 
-        /* HEADER: LOQO BÖYÜDÜLDÜ Kİ İÇİNDƏKİ YAZI OXUNSUN */
+        /* HEADER: LOQO + LUXAR */
         .header-nav {
             display: flex; 
             align-items: center; 
             justify-content: flex-start; 
             margin-bottom: 30px;
-            gap: 12px; /* Yazı ilə loqo arası məsafə */
+            gap: 8px; /* Loqo ilə yazı arasını minimal saxladıq */
         }
         .nav-logo { 
-            width: 75px; /* Loqo boyüdü ki, daxilindəki LUXAR sözü oxunsun */
-            height: 75px; 
+            width: 95px; /* Böyüdülmüş loqo */
+            height: 95px; 
             object-fit: contain;
-            image-rendering: -webkit-optimize-contrast; /* Kəskinlik üçün */
+            image-rendering: -webkit-optimize-contrast;
             display: block;
         }
         .nav-brand { 
             font-weight: 700; 
-            font-size: 1.5rem; 
+            font-size: 1.7rem; /* Loqoya uyğun böyük yazı */
             color: #fff; 
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        /* Mobil üçün */
+        @media (max-width: 480px) {
+            .nav-logo { width: 65px; height: 65px; }
+            .nav-brand { font-size: 1.4rem; }
+            .header-nav { gap: 6px; }
         }
 
         .hero-box { text-align: left; margin-bottom: 35px; }
