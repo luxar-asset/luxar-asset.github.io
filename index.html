@@ -7,7 +7,7 @@
     
     <link rel="icon" type="image/png" href="https://i.postimg.cc/J4mqxHWT/Adobe-Express-file.png">
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root { --bg: #050505; --card: #0d0d0d; --poly: #8247e5; --text: #f0f0f0; }
@@ -16,32 +16,30 @@
         
         .container { width: 100%; max-width: 420px; text-align: center; }
 
-        /* HEADER: TAM İSTƏDİYİN NƏHƏNG VƏ SOLDAKI GÖRÜNTÜ */
+        /* HEADER: LOQO VƏ YAZI YAN-YANA VƏ SOLDA */
         .header-nav {
             display: flex; 
             align-items: center; 
-            justify-content: flex-start; 
-            margin-bottom: 40px;
+            justify-content: flex-start; /* Tam Sola çəkildi */
+            margin-bottom: 25px;
             padding-left: 0;
         }
         .nav-logo { 
-            width: 120px; /* NƏHƏNG ÖLÇÜ - "Spiçka qutusu" deyil artıq */
-            height: 120px; 
-            margin-right: 5px; /* Məsafəni minimuma endirdim */
+            width: 50px; /* İstədiyin normal ölçü */
+            height: 50px; 
+            margin-right: 8px; /* Aradakı məsafə minimuma endirildi - 2 barmaq deyil! */
             object-fit: contain;
-            image-rendering: -webkit-optimize-contrast;
             display: block;
         }
         .nav-brand { 
-            font-weight: 900; /* Ən qalın şrift */
-            font-size: 2.5rem; /* Çox iri hərf ölçüsü */
-            letter-spacing: -1px; 
+            font-weight: 700; 
+            font-size: 1.4rem; /* Sadə və aydın ölçü */
             color: #fff; 
             text-transform: uppercase;
-            line-height: 1;
+            letter-spacing: 0.5px;
         }
 
-        .hero-box { text-align: left; margin-bottom: 40px; }
+        .hero-box { text-align: left; margin-bottom: 35px; }
         .hero-box h2 { font-size: 1.8rem; font-weight: 700; line-height: 1.2; color: #fff; margin-bottom: 12px; }
         .hero-box h2 span { color: var(--poly); }
         .hero-box p { font-size: 0.95rem; color: #666; line-height: 1.5; }
