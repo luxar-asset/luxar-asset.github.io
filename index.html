@@ -16,28 +16,34 @@
         
         .container { width: 100%; max-width: 420px; text-align: center; }
 
-        /* Başlıq: Loqo ciddi şəkildə böyüdü */
+        /* Başlıq: Yenidən SOLDA və daha İRİ */
         .header-nav {
             display: flex; 
-            flex-direction: column; /* Loqo və Ad alt-alta daha dominant görünür */
             align-items: center; 
-            justify-content: center;
-            margin-bottom: 35px;
+            justify-content: flex-start; /* Sola söykəndi */
+            margin-bottom: 30px;
+            padding-left: 5px;
         }
         .nav-logo { 
-            width: 80px; /* 44px-dən 80px-ə qaldırdım */
-            height: 80px; 
-            margin-bottom: 15px; /* Adla loqo arası məsafə */
+            width: 55px; /* Loqo böyüdü */
+            height: 55px; 
+            margin-right: 15px; 
             object-fit: contain;
+            /* PC və Mobil üçün maksimum kəskinlik */
             image-rendering: -webkit-optimize-contrast;
             image-rendering: crisp-edges;
             display: block;
-            filter: drop-shadow(0 0 10px rgba(130, 71, 229, 0.2)); /* Loqoya yüngül bənövşəyi parıltı */
         }
-        .nav-brand { font-weight: 700; font-size: 1.6rem; letter-spacing: 2px; color: #fff; text-transform: uppercase; }
+        .nav-brand { 
+            font-weight: 700; 
+            font-size: 1.5rem; 
+            letter-spacing: 1px; 
+            color: #fff; 
+            text-transform: uppercase;
+        }
 
         /* Mərkəzi Mətn */
-        .hero-box { text-align: center; margin-bottom: 40px; padding: 0 5px; }
+        .hero-box { text-align: left; margin-bottom: 40px; padding: 0 5px; }
         .hero-box h2 { font-size: 1.8rem; font-weight: 700; line-height: 1.2; color: #fff; margin-bottom: 12px; }
         .hero-box h2 span { color: var(--poly); }
         .hero-box p { font-size: 0.95rem; color: #666; line-height: 1.5; font-weight: 300; }
@@ -78,7 +84,7 @@
 <body>
     <div class="container">
         <header class="header-nav">
-            <img src="https://i.postimg.cc/J4mqxHWT/Adobe-Express-file.png" alt="LUXAR" class="nav-logo">
+            <img src="https://i.postimg.cc/J4mqxHWT/Adobe-Express-file.png" alt="L" class="nav-logo">
             <span class="nav-brand">LUXAR</span>
         </header>
 
