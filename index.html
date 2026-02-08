@@ -20,12 +20,12 @@
         .header-nav {
             display: flex; 
             align-items: center; 
-            justify-content: flex-start; 
+            justify-content: flex-start; /* Sola yapışdırır */
             margin-bottom: 30px;
-            gap: 8px; /* Loqo ilə yazı arasını minimal saxladıq */
+            gap: 2px; /* Loqo ilə yazı arasını minimal saxladıq (1-2px) */
         }
         .nav-logo { 
-            width: 95px; /* Böyüdülmüş loqo */
+            width: 95px; /* Böyüklük, içindəki LUXAR oxunsun */
             height: 95px; 
             object-fit: contain;
             image-rendering: -webkit-optimize-contrast;
@@ -33,7 +33,7 @@
         }
         .nav-brand { 
             font-weight: 700; 
-            font-size: 1.7rem; /* Loqoya uyğun böyük yazı */
+            font-size: 1.7rem; /* Loqoya nisbətən uyğun */
             color: #fff; 
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -43,7 +43,7 @@
         @media (max-width: 480px) {
             .nav-logo { width: 65px; height: 65px; }
             .nav-brand { font-size: 1.4rem; }
-            .header-nav { gap: 6px; }
+            .header-nav { gap: 1px; } /* Mobil üçün daha minimal gap */
         }
 
         .hero-box { text-align: left; margin-bottom: 35px; }
