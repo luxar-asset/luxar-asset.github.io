@@ -12,38 +12,37 @@
     <style>
         :root { --bg: #050505; --card: #0d0d0d; --poly: #8247e5; --text: #f0f0f0; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; display: flex; justify-content: center; min-height: 100vh; padding: 30px 20px; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; display: flex; justify-content: center; min-height: 100vh; padding: 10px 20px; }
         
         .container { width: 100%; max-width: 420px; }
 
-        /* HEADER: LOQONU DÜZƏLTDİM VƏ SOLA YAXINLAŞDIRDIM */
+        /* HEADER: YENİ NİZAM */
         .header-nav {
             display: flex; 
             align-items: center; 
             justify-content: flex-start;
-            margin-bottom: 25px; 
+            margin-top: 30px; /* Saytın ən yuxarısından bir az aşağı saldım */
+            margin-bottom: 15px; /* Riyazi Qıtlıq yazısına yaxınlaşdırdım */
             padding-left: 0;
-            gap: 8px; /* Loqo və Yazı bitişik durur */
+            gap: 10px;
         }
         
         .nav-logo { 
-            width: 70px; /* Loqo böyüdü ki daxilindəki söz oxunsun */
+            width: 45px; /* Loqonu kiçiltdim ki yazı ilə proporsional olsun */
             height: auto; 
-            /* border-radius silindi (əyriliyin səbəbi o idi) */
             display: block;
             object-fit: contain;
-            image-rendering: -webkit-optimize-contrast; /* PC-də təmiz görüntü */
         }
         
         .nav-brand { 
             font-weight: 700; 
-            font-size: 1.4rem; 
+            font-size: 1.6rem; /* Yazını bir az böyütdüm ki loqo ilə eyni görünsün */
             letter-spacing: 1px; 
             color: #fff; 
             text-transform: uppercase;
         }
 
-        .hero-box { text-align: left; margin-bottom: 40px; padding: 0 5px; }
+        .hero-box { text-align: left; margin-bottom: 35px; }
         .hero-box h2 { font-size: 1.8rem; font-weight: 700; line-height: 1.2; color: #fff; margin-bottom: 12px; }
         .hero-box h2 span { color: var(--poly); }
         .hero-box p { font-size: 0.9rem; color: #666; line-height: 1.5; font-weight: 300; }
@@ -58,24 +57,19 @@
             position: absolute; right: 15px; top: 18px; 
             font-size: 0.6rem; color: var(--poly); border: 1px solid #222; 
             padding: 5px 10px; border-radius: 8px; text-decoration: none; 
-            text-transform: uppercase; font-weight: 700; transition: 0.3s;
+            text-transform: uppercase; font-weight: 700;
         }
-        .proof-btn:hover { background: var(--poly); color: #fff; }
 
         .ca-container { margin-bottom: 30px; }
         .ca-box { background: #000; border: 1px solid #222; padding: 15px; border-radius: 12px; cursor: pointer; text-align: left; }
         code { font-size: 0.65rem; color: #555; word-break: break-all; }
         
-        .scan-link { display: inline-block; margin-top: 12px; font-size: 0.7rem; color: #444; text-decoration: none; transition: 0.3s; }
-        .scan-link:hover { color: var(--poly); }
-
-        .btn { width: 100%; padding: 18px; border-radius: 15px; text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 12px; transition: 0.3s; }
+        .btn { width: 100%; padding: 18px; border-radius: 15px; text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 12px; }
         .btn-buy { background: var(--poly); color: #fff; box-shadow: 0 5px 15px rgba(130, 71, 229, 0.3); }
         .btn-wp { background: transparent; color: #fff; border: 1px solid #222; }
 
         .social-icons { display: flex; justify-content: center; gap: 45px; margin-top: 35px; padding-top: 25px; border-top: 1px solid #111; }
-        .social-icons a { color: #fff; font-size: 1.6rem; transition: 0.3s; }
-        .social-icons a:hover { color: var(--poly); }
+        .social-icons a { color: #fff; font-size: 1.6rem; }
     </style>
 </head>
 <body>
@@ -114,7 +108,6 @@
                 <span style="font-size: 0.55rem; color: #444; display: block; margin-bottom: 5px; text-transform: uppercase;">Smart Contract Address</span>
                 <code id="ca">0x0000000000000000000000000000000000000000</code>
             </div>
-            <a href="#" class="scan-link">Verify on Polygonscan <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
 
         <a href="AL_LINK" class="btn btn-buy"><i class="fa-solid fa-cart-shopping"></i> Buy on QuickSwap</a>
