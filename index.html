@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUXAR ASSET | Terminal</title>
     
-    <link rel="icon" type="image/jpeg" href="https://i.postimg.cc/rw62MM5V/IMG-20260207-WA0209.jpg">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/J4mqxHWT/Adobe-Express-file.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -16,19 +16,20 @@
         
         .container { width: 100%; max-width: 420px; text-align: center; }
 
-        /* Başlıq: Loqo daha böyük və kəskin */
+        /* Başlıq: Loqo təmiz və kəskin */
         .header-nav {
             display: flex; align-items: center; justify-content: flex-start;
             margin-bottom: 25px; padding-left: 5px;
         }
         .nav-logo { 
-            width: 42px; 
-            height: 42px; 
-            border-radius: 50%; 
+            width: 44px; 
+            height: 44px; 
             margin-right: 12px; 
-            object-fit: cover;
-            image-rendering: -webkit-optimize-contrast; 
-            border: 1px solid #222; 
+            object-fit: contain; /* PNG olduğu üçün contain daha yaxşıdır */
+            /* PC-də maksimal kəskinlik üçün */
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            display: block;
         }
         .nav-brand { font-weight: 700; font-size: 1.3rem; letter-spacing: 1px; color: #fff; }
 
@@ -74,7 +75,7 @@
 <body>
     <div class="container">
         <header class="header-nav">
-            <img src="https://i.postimg.cc/rw62MM5V/IMG-20260207-WA0209.jpg" alt="L" class="nav-logo">
+            <img src="https://i.postimg.cc/J4mqxHWT/Adobe-Express-file.png" alt="L" class="nav-logo">
             <span class="nav-brand">LUXAR</span>
         </header>
 
