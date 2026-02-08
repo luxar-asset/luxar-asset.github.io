@@ -16,29 +16,29 @@
         
         .container { width: 100%; max-width: 420px; }
 
-        /* HEADER: ŞƏKİLDƏKİ KİMİ SIFIR BOŞLUQ VƏ SOLA HİZALAMA */
+        /* HEADER: LOQO BÖYÜDÜLDÜ Kİ İÇİNDƏKİ YAZI OXUNSUN */
         .header-nav {
             display: flex; 
             align-items: center; 
-            justify-content: flex-start; /* Sola yapışdır */
-            margin-bottom: 25px;
-            gap: 10px; /* Şəkildəki o sıx məsafə */
+            justify-content: flex-start; 
+            margin-bottom: 30px;
+            gap: 12px; /* Yazı ilə loqo arası məsafə */
         }
         .nav-logo { 
-            width: 32px; /* Şəkildəki kiçik və səliqəli ölçü */
-            height: 32px; 
+            width: 75px; /* Loqo boyüdü ki, daxilindəki LUXAR sözü oxunsun */
+            height: 75px; 
             object-fit: contain;
+            image-rendering: -webkit-optimize-contrast; /* Kəskinlik üçün */
             display: block;
         }
         .nav-brand { 
             font-weight: 700; 
-            font-size: 1.2rem; /* Şəkildəki sadə ölçü */
+            font-size: 1.5rem; 
             color: #fff; 
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
 
-        /* Riyazi Qıtlıq yazısı ilə loqonun eyni xəttə olması üçün */
         .hero-box { text-align: left; margin-bottom: 35px; }
         .hero-box h2 { font-size: 1.8rem; font-weight: 700; line-height: 1.2; color: #fff; margin-bottom: 12px; }
         .hero-box h2 span { color: var(--poly); }
