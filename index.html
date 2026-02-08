@@ -14,29 +14,27 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; display: flex; justify-content: center; min-height: 100vh; padding: 30px 20px; }
         
-        .container { width: 100%; max-width: 420px; text-align: center; }
+        .container { width: 100%; max-width: 420px; }
 
-        /* HEADER: LOQO VƏ YAZI YAN-YANA VƏ SOLDA */
+        /* Sırf bura bax: Loqo və yazı tam yaxın və solda */
         .header-nav {
             display: flex; 
             align-items: center; 
-            justify-content: flex-start; /* Tam Sola çəkildi */
+            justify-content: flex-start; /* Tam sola yapışdırır */
             margin-bottom: 25px;
-            padding-left: 0;
+            gap: 5px; /* Sənin barmağınla göstərdiyin o boşluğu bura həll edir - minimum məsafə */
         }
         .nav-logo { 
-            width: 50px; /* İstədiyin normal ölçü */
+            width: 50px; /* Orijinal saxladım */
             height: 50px; 
-            margin-right: 8px; /* Aradakı məsafə minimuma endirildi - 2 barmaq deyil! */
             object-fit: contain;
             display: block;
         }
         .nav-brand { 
             font-weight: 700; 
-            font-size: 1.4rem; /* Sadə və aydın ölçü */
+            font-size: 1.4rem; /* Sadə və orijinal ölçü */
             color: #fff; 
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
         .hero-box { text-align: left; margin-bottom: 35px; }
