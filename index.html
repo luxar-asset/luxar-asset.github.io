@@ -58,11 +58,26 @@
             text-transform: uppercase; font-weight: 700;
         }
 
-        .ca-container { margin-bottom: 30px; }
-        .ca-box { background: #000; border: 1px solid #222; padding: 15px; border-radius: 12px; cursor: pointer; text-align: left; }
+        .ca-container { margin-bottom: 30px; text-align: left; }
+        .ca-box { background: #000; border: 1px solid #222; padding: 15px; border-radius: 12px; cursor: pointer; transition: 0.3s; }
+        .ca-box:hover { border-color: var(--poly); }
         code { font-size: 0.65rem; color: #555; word-break: break-all; }
         
-        .btn { width: 100%; padding: 18px; border-radius: 15px; text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 12px; }
+        /* Polygonscan linki stili */
+        .scan-link { 
+            display: inline-block; 
+            margin-top: 10px; 
+            font-size: 0.7rem; 
+            color: #444; 
+            text-decoration: none; 
+            transition: 0.3s;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .scan-link:hover { color: var(--poly); }
+
+        .btn { width: 100%; padding: 18px; border-radius: 15px; text-decoration: none; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 12px; transition: 0.3s; }
         .btn-buy { background: var(--poly); color: #fff; box-shadow: 0 5px 15px rgba(130, 71, 229, 0.3); }
         .btn-wp { background: transparent; color: #fff; border: 1px solid #222; }
 
@@ -107,6 +122,9 @@
                 <span style="font-size: 0.55rem; color: #444; display: block; margin-bottom: 5px; text-transform: uppercase;">Smart Contract Address</span>
                 <code id="ca">0x0000000000000000000000000000000000000000</code>
             </div>
+            <a href="https://polygonscan.com/token/0x0000000000000000000000000000000000000000" target="_blank" class="scan-link">
+                View on Polygonscan <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.6rem; margin-left: 3px;"></i>
+            </a>
         </div>
 
         <a href="#" class="btn btn-buy"><i class="fa-solid fa-cart-shopping"></i> Buy on QuickSwap</a>
