@@ -16,27 +16,29 @@
         
         .container { width: 100%; max-width: 420px; }
 
-        /* Sırf bura bax: Loqo və yazı tam yaxın və solda */
+        /* HEADER: ŞƏKİLDƏKİ KİMİ SIFIR BOŞLUQ VƏ SOLA HİZALAMA */
         .header-nav {
             display: flex; 
             align-items: center; 
-            justify-content: flex-start; /* Tam sola yapışdırır */
+            justify-content: flex-start; /* Sola yapışdır */
             margin-bottom: 25px;
-            gap: 5px; /* Sənin barmağınla göstərdiyin o boşluğu bura həll edir - minimum məsafə */
+            gap: 10px; /* Şəkildəki o sıx məsafə */
         }
         .nav-logo { 
-            width: 50px; /* Orijinal saxladım */
-            height: 50px; 
+            width: 32px; /* Şəkildəki kiçik və səliqəli ölçü */
+            height: 32px; 
             object-fit: contain;
             display: block;
         }
         .nav-brand { 
             font-weight: 700; 
-            font-size: 1.4rem; /* Sadə və orijinal ölçü */
+            font-size: 1.2rem; /* Şəkildəki sadə ölçü */
             color: #fff; 
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
+        /* Riyazi Qıtlıq yazısı ilə loqonun eyni xəttə olması üçün */
         .hero-box { text-align: left; margin-bottom: 35px; }
         .hero-box h2 { font-size: 1.8rem; font-weight: 700; line-height: 1.2; color: #fff; margin-bottom: 12px; }
         .hero-box h2 span { color: var(--poly); }
